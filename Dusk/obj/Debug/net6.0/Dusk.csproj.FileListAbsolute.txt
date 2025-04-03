@@ -18,3 +18,4 @@ C:\Users\nosas\RiderProjects\Dusk\Dusk\obj\Debug\net6.0\ref\Dusk.dll
 C:\Users\nosas\RiderProjects\Dusk\Dusk\bin\Debug\net6.0\UnityEngine.TextRenderingModule.dll
 C:\Users\nosas\RiderProjects\Dusk\Dusk\bin\Debug\net6.0\UnityEngine.UI.dll
 C:\Users\nosas\RiderProjects\Dusk\Dusk\bin\Debug\net6.0\UnityEngine.UIModule.dll
+C:\Users\nosas\RiderProjects\Dusk\Dusk\obj\Debug\net6.0\Dusk.sourcelink.json
