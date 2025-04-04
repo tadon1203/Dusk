@@ -23,6 +23,7 @@ public static class ConfigManager
         {
             new ColorJsonConverter(),
             new KeyCodeJsonConverter(),
+            new UnityVector2JsonConverter(),
             new UnityVector3JsonConverter()
         }
     };

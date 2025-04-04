@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Dusk.Core;
 using Dusk.Core.Config;
+using Dusk.Modules.Visual;
 using UnityEngine;
 using Logger = Dusk.Core.Logger;
 
@@ -14,6 +15,7 @@ public static class ModuleManager
     
     public static void Initialize()
     {
+        RegisterModule(new Menu());
     }
     
     private static void RegisterModule(BaseModule module)

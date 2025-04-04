@@ -22,30 +22,20 @@
 
     <ItemGroup>
       <Folder Include="libs\" />
-      <Folder Include="src\Modules\Visual\" />
     </ItemGroup>
 
     <ItemGroup>
       <Reference Include="Il2Cppmscorlib">
         <HintPath>libs\Il2Cppmscorlib.dll</HintPath>
       </Reference>
-      <Reference Include="Unity.TextMeshPro">
-        <HintPath>libs\Unity.TextMeshPro.dll</HintPath>
-      </Reference>
       <Reference Include="UnityEngine.CoreModule">
         <HintPath>libs\UnityEngine.CoreModule.dll</HintPath>
       </Reference>
+      <Reference Include="UnityEngine.IMGUIModule">
+        <HintPath>libs\UnityEngine.IMGUIModule.dll</HintPath>
+      </Reference>
       <Reference Include="UnityEngine.InputLegacyModule">
         <HintPath>libs\UnityEngine.InputLegacyModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.TextRenderingModule">
-        <HintPath>libs\UnityEngine.TextRenderingModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UI">
-        <HintPath>libs\UnityEngine.UI.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.UIModule">
-        <HintPath>libs\UnityEngine.UIModule.dll</HintPath>
       </Reference>
     </ItemGroup>
 </Project>
