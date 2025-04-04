@@ -8,7 +8,6 @@ namespace Dusk.Modules.Visual;
 public class MenuModule : BaseModule
 {
     private GameObject _menuCanvas;
-    private KeyCode _toggleKey = KeyCode.Insert;
     private ScrollRect _scrollView;
     private ToggleGroup _toggleGroup;
     
@@ -24,14 +23,6 @@ public class MenuModule : BaseModule
         if (_menuCanvas != null)
         {
             UnityEngine.Object.Destroy(_menuCanvas);
-        }
-    }
-    
-    public override void OnUpdate()
-    {
-        if (Input.GetKeyDown(_toggleKey))
-        {
-            Toggle();
         }
     }
     

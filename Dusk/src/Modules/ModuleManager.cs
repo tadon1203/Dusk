@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Dusk.Modules.Visual;
+using UnityEngine;
 
 namespace Dusk.Modules;
 
@@ -30,6 +31,10 @@ public static class ModuleManager
             if (module.Enabled)
             {
                 module.OnUpdate();
+            }
+            if (Input.GetKeyDown(module.ToggleKey))
+            {
+                module.Toggle();
             }
         }
     }
