@@ -2,22 +2,27 @@
 using BepInEx;
 using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
+using Dusk.Core.Config;
 using Dusk.Modules;
 using UnityEngine;
 
-namespace Dusk;
+namespace Dusk.Core;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 public class DuskPlugin : BasePlugin
 {
-    public new static ManualLogSource Log;
-
     public override void Load()
     {
-        Log = base.Log;
+        Logger.Initialize();
+        Logger.Info("Initializing Dusk...");
+
+        ConfigManager.Initialize(); 
         ModuleManager.Initialize();
+        
+        CoroutineRunner.Initialize(AddComponent<CoroutineRunner>());
         AddComponent<DuskMonoBehaviour>();
-        Log.LogInfo("Dusk initialized");
+    
+        Logger.Info("Dusk initialized successfully");
     }
 }
 

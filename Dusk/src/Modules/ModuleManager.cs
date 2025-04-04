@@ -1,27 +1,33 @@
 ﻿using System.Collections.Generic;
-using Dusk.Modules.Visual;
+using Dusk.Core;
+using Dusk.Core.Config;
 using UnityEngine;
+using Logger = Dusk.Core.Logger;
 
 namespace Dusk.Modules;
 
 public static class ModuleManager
 {
     private static readonly List<BaseModule> Modules = new();
-    private static MenuModule _menuModule;
     
     public static IEnumerable<BaseModule> GetModules() => Modules.AsReadOnly();
     
     public static void Initialize()
     {
-        _menuModule = new MenuModule();
-        RegisterModule(_menuModule);
     }
     
     private static void RegisterModule(BaseModule module)
     {
-        if (module == null) return;
+        if (module == null)
+        {
+            Logger.Warning("Attempted to register a null module");
+            return;
+        }
+        
+        ConfigManager.RegisterModuleConfig(module);
+        
         Modules.Add(module);
-        DuskPlugin.Log.LogInfo($"Module registered: {module.Name}");
+        Logger.Debug($"Module registered: {module.Name}");
     }
     
     public static void UpdateModules()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Dusk.Core;
 
 namespace Dusk.Events;
 
@@ -9,6 +10,12 @@ public static class EventManager
 
     public static void Subscribe<T>(Action<T> handler)
     {
+        if (handler == null)
+        {
+            Logger.Critical(nameof(handler) + " is null");
+            return;
+        }
+        
         if (_eventTable.TryGetValue(typeof(T), out var existing))
         {
             _eventTable[typeof(T)] = Delegate.Combine(existing, handler);
