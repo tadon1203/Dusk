@@ -73,6 +73,15 @@ public class UdonInspector : BaseModule
         {
             RefreshUdonCache();
         }
+        
+        if (GUILayout.Button("Disassemble All"))
+        {
+            RefreshUdonCache();
+            foreach (var kv in _udonCache)
+            {
+                UdonDisassembler.Disassemble(kv.Key, kv.Value);
+            }
+        }
     }
 
     private void DrawUdonList()
