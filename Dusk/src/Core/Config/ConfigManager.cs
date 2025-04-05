@@ -14,7 +14,7 @@ namespace Dusk.Core.Config;
 public static class ConfigManager
 {
     private static string ConfigDirectory => Path.Combine(Directory.GetCurrentDirectory(), "Dusk");
-    private static string ConfigPath => Path.Combine(ConfigDirectory, "ModuleConfig.json");
+    private static string ConfigPath => Path.Combine(ConfigDirectory, "ModuleConfig.cock");
     
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
@@ -56,7 +56,7 @@ public static class ConfigManager
         }
     }
     
-    private static void LoadConfig()
+    public static void LoadConfig()
     {
         try
         {

@@ -15,6 +15,7 @@ public static class ModuleManager
     
     public static void Initialize()
     {
+        RegisterModule(new UdonInspector());
         RegisterModule(new Menu());
     }
     
